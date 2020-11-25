@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui";
 import React from "react";
+import MainContent from "./MainContent";
 
 const Main: React.FC = ({ children }) => (
   <main
@@ -16,7 +17,7 @@ const Main: React.FC = ({ children }) => (
       zIndex: 100,
     }}
   >
-    {children}
+    <MainContent>{children}</MainContent>
   </main>
 );
 

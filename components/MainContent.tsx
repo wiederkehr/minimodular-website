@@ -6,9 +6,8 @@ const MainContent: React.FC = ({ children }) => (
   <section
     sx={{
       backgroundColor: "background",
-      flexGrow: 99999,
       flexBasis: 0,
-      minWidth: "sidebar",
+      flexGrow: 99999,
       padding: 3,
     }}
   >

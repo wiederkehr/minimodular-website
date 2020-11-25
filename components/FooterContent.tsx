@@ -1,22 +1,29 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui";
 import React from "react";
+import { Container } from 'theme-ui'
 
 const FooterContent: React.FC = ({ children }) => (
   <section
     sx={{
-      alignItems: "center",
-      display: ["none", "flex"],
-      flexBasis: 0,
-      flexGrow: 99999,
-      flexDirection: "row",
-      flexWrap: "nowrap",
-      fontSize: 0,
-      minHeight: "footer",
-      minWidth: "sidebar",
+      backgroundColor: "surface",
+      borderTop: "1px solid",
+      borderColor: "border",
+      fontSize: 1,
+      padding: 3,
     }}
   >
-    {children}
+    <Container
+    sx={{
+      display: ["flex"],
+      flexBasis: 0,
+      flexDirection: "row",
+      flexGrow: 99999,
+      flexWrap: "nowrap",
+      justifyContent: "space-between",
+      }}>
+      {children}
+    </Container>
   </section>
 );
 

@@ -3,7 +3,7 @@ import palette from "./palette";
 export default {
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   sizes: {
-    container: "80rem",
+    container: "40rem",
     sidebar: 320,
     header: 60,
     footer: 60,

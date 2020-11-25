@@ -26,22 +26,12 @@ const Branding: React.FC = () => {
         <img
           src={
             colorMode === "default"
-              ? "/minimodules_logo_positive.svg"
-              : "/minimodules_logo_negative.svg"
+              ? "/minimodular_logo_extended_vertical_positive.svg"
+              : "/minimodular_logo_extended_vertical_negative.svg"
           }
-          width="25"
+          height="50"
           alt="Minimodules Logo"
         />
-        <span
-          sx={{
-            color: "onSurface",
-            fontWeight: 600,
-            fontSize: 0,
-            marginLeft: "1rem",
-          }}
-        >
-          Minimodular
-        </span>
       </a>
     </Link>
   );
