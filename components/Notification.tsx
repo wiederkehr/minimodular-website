@@ -24,7 +24,7 @@ const Notification: React.FC = () => (
 export default Notification;
   
 const NotificationLink: React.FC = ({ children, href }) => (
-  <Link sx={{
+  <Link target="blank" sx={{
     display: "inline-flex",
     alignItems: "center",
     px: "2",
