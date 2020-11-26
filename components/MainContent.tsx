@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui";
+import { jsx, Container } from "theme-ui";
 import React from "react";
 
 const MainContent: React.FC = ({ children }) => (
@@ -11,7 +11,9 @@ const MainContent: React.FC = ({ children }) => (
       padding: 3,
     }}
   >
-    {children}
+    <Container>
+      {children}
+    </Container>
   </section>
 );
 

@@ -1,25 +1,25 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui";
+import { jsx, Container } from "theme-ui";
 import React from "react";
 
 const HeaderContent: React.FC = ({ children }) => (
   <section
     sx={{
-      alignItems: "center",
       backgroundColor: "surface",
       borderBottom: "1px solid",
       borderColor: "border",
-      display: "flex",
-      flexBasis: 0,
-      flexDirection: "row",
-      flexGrow: 99999,
-      flexWrap: "nowrap",
-      fontSize: 0,
-      justifyContent: "center",
+      fontSize: 1,
       padding: 3,
     }}
   >
-    {children}
+    <Container
+    sx={{
+      display: "flex",
+      flexDirection: ["column", "row"],
+      justifyContent: "space-between",
+      }}>
+      {children}
+    </Container>
   </section>
 );
 

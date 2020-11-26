@@ -4,9 +4,6 @@ export default {
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   sizes: {
     container: "40rem",
-    sidebar: 320,
-    header: 60,
-    footer: 60,
   },
   fonts: {
     body: "'Source Code Pro', monospace",
@@ -16,7 +13,7 @@ export default {
   fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 96],
   fontWeights: {
     body: 400,
-    heading: 600,
+    heading: 700,
     bold: 600,
   },
   lineHeights: {
@@ -152,6 +149,9 @@ export default {
     },
     img: {
       maxWidth: "100%",
+    },
+    hr: {
+      color: "border",
     },
   },
 };

@@ -5,14 +5,7 @@ import HeaderContent from "./HeaderContent";
 import Branding from "./Branding";
 
 const Header: React.FC = () => (
-  <header
-    sx={{
-      alignItems: "center",
-      display: "flex",
-      flexWrap: "wrap",
-      zIndex: 300,
-    }}
-  >
+  <header>
     <HeaderContent><Branding /></HeaderContent>
   </header>
 );

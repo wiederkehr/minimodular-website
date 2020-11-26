@@ -12,7 +12,12 @@ const Notification: React.FC = () => (
     margin: 0,
     textAlign: "center",
   }}>
-      Follow our research and development on <NotificationLink href="https://instagramt.com/minimodular">Instagram</NotificationLink>
+      Follow our research and development on <NotificationLink href="https://instagram.com/minimodular">Instagram <img
+          sx={{marginLeft: 2}}
+          src={"/launch-app.svg"}
+          height="16px"
+          alt="Minimodules Logo"
+        /></NotificationLink>
   </p>
   )
   
@@ -20,12 +25,16 @@ export default Notification;
   
 const NotificationLink: React.FC = ({ children, href }) => (
   <Link sx={{
-    display: "inline-block",
+    display: "inline-flex",
+    alignItems: "center",
     px: "2",
     py: "1",
     backgroundColor: "#ff5555",
     color: "#fff",
     borderRadius: "4px",
     textDecoration: "none",
+    "&:hover": {
+      backgroundColor: "#000",
+    }
   }} href={href}>{children}</Link>
 )

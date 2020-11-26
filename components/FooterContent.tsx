@@ -1,7 +1,6 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui";
+import { jsx, Container } from "theme-ui";
 import React from "react";
-import { Container } from 'theme-ui'
 
 const FooterContent: React.FC = ({ children }) => (
   <section
@@ -15,11 +14,8 @@ const FooterContent: React.FC = ({ children }) => (
   >
     <Container
     sx={{
-      display: ["flex"],
-      flexBasis: 0,
-      flexDirection: "row",
-      flexGrow: 99999,
-      flexWrap: "nowrap",
+      display: "flex",
+      flexDirection: ["column", "row"],
       justifyContent: "space-between",
       }}>
       {children}
