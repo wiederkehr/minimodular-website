@@ -1,23 +1,22 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui";
+import { jsx, Container } from "theme-ui";
 import React from "react";
-import MainContent from "./MainContent";
 
 const Main: React.FC = ({ children }) => (
   <main
     sx={{
-      width: "100%",
+      backgroundColor: "background",
       display: "flex",
-      flexBasis: "auto",
-      flexDirection: "row-reverse",
       flexGrow: 1,
-      flexShrink: 1,
-      flexWrap: "wrap",
+      padding: 3,
       position: "relative",
+      width: "100%",
       zIndex: 100,
     }}
   >
-    <MainContent>{children}</MainContent>
+    <Container>
+      {children}
+    </Container>
   </main>
 );
 

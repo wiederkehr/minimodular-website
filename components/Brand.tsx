@@ -4,15 +4,16 @@ import React from "react";
 import Link from "next/link";
 import { useColorMode } from "theme-ui";
 
-const Branding: React.FC = () => {
+const Brand: React.FC = () => {
   const [colorMode, setColorMode] = useColorMode();
   return (
-    <Link href="/">
+    <Link href="/" passHref>
       <a
         sx={{
           lineHeight: 1,
         }}
-        aria-label="Home"
+        aria-label="Minimodular Home"
+        title="Minimodular Home"
       >
         <img
           src={
@@ -28,4 +29,4 @@ const Branding: React.FC = () => {
   );
 };
 
-export default Branding;
+export default Brand;

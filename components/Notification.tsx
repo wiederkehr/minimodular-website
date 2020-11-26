@@ -12,7 +12,7 @@ const Notification: React.FC = () => (
     margin: 0,
     textAlign: "center",
   }}>
-      Follow our research and development on <NotificationLink href="https://instagram.com/minimodular">Instagram <img
+      Follow our research and development on <NotificationLink href="https://instagram.com/minimodular">Instagram<img
           sx={{marginLeft: 2}}
           src={"/launch-app.svg"}
           height="16px"
@@ -22,7 +22,7 @@ const Notification: React.FC = () => (
   )
   
 export default Notification;
-  
+
 const NotificationLink: React.FC = ({ children, href }) => (
   <Link target="blank" sx={{
     display: "inline-flex",

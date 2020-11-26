@@ -3,7 +3,7 @@ import palette from "./palette";
 export default {
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   sizes: {
-    container: "40rem",
+    container: "48rem",
   },
   fonts: {
     body: "'Source Code Pro', monospace",
@@ -69,7 +69,7 @@ export default {
       fontFamily: "body",
       lineHeight: "body",
       fontWeight: "body",
-      bg: "background",
+      bg: "surface",
     },
     h1: {
       color: "text",
