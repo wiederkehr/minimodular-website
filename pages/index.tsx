@@ -27,18 +27,6 @@ const Home: React.FC = () => (
         }}>
         <Notification />
       </Box>
-      <Divider />
-      <Box sx={{
-        my: 5
-      }}>
-      <Styled.ul>
-        <li>Vestpack (#wip)</li>
-        <li>Organizational Systems 2020</li>
-        <li>Organizational Systems 2019</li>
-        <li>Dog Sleeping System</li>
-        <li>Dog Harness</li>
-      </Styled.ul>
-      </Box>
     </Main>
     <Footer />
   </Page>
