@@ -44,26 +44,7 @@ export default {
       },
     },
   },
-  buttons: {
-    primary: {
-      bg: "transparent",
-      border: "2px solid",
-      borderColor: "primary",
-      color: "primary",
-      cursor: "pointer",
-      fontFamily: "body",
-      fontSize: 1,
-      textTransform: "uppercase",
-      "&:hover": {
-        bg: "primary",
-        color: "onPrimary",
-      },
-      "&:focus": {
-        boxShadow: "rgba(0,0,0,0.1) 0px 0px 0px 3px",
-        outline: "none",
-      },
-    },
-  },
+  buttons: {},
   styles: {
     root: {
       fontFamily: "body",
@@ -125,7 +106,6 @@ export default {
     },
     pre: {
       fontFamily: "monospace",
-      overflowX: "auto",
       code: {
         color: "inherit",
       },
@@ -136,15 +116,12 @@ export default {
     },
     table: {
       width: "100%",
-      borderCollapse: "separate",
       borderSpacing: 0,
     },
     th: {
-      textAlign: "left",
       borderBottomStyle: "solid",
     },
     td: {
-      textAlign: "left",
       borderBottomStyle: "solid",
     },
     img: {
