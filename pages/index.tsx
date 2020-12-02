@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Box, Divider, Styled } from "theme-ui";
+import { jsx, Box, Styled } from "theme-ui";
 import React from "react";
 import Page from "../components/Page";
 import Header from "../components/Header";
