@@ -18,17 +18,23 @@ const Menu: React.FC = () => (
 
 export default Menu;
 
-const Item: React.FC = ({ href, children, last }) => (
+interface ItemProps {
+  children?: React.ReactNode;
+  href: string;
+  last?: boolean;
+}
+
+const Item = (props: ItemProps) => (
   <li sx={{
     display: "inline-block",
-    marginRight: last ? 0 : 3,
+    marginRight: props.last ? 0 : 3,
       }}>
-    <Link href="/">
+    <Link href={props.href}>
     <a
       sx={{
       }}
       >
-        {children}
+        {props.children}
     </a>
     </Link>
   </li>

@@ -2,7 +2,6 @@
 import { jsx, Container } from "theme-ui";
 import React from "react";
 import Brand from "./Brand";
-import Menu from "./Menu";
 
 const Header: React.FC = () => (
   <header sx={{

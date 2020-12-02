@@ -23,7 +23,12 @@ const Notification: React.FC = () => (
   
 export default Notification;
 
-const NotificationLink: React.FC = ({ children, href }) => (
+interface NotificationLinkProps {
+  children?: React.ReactNode;
+  href: string
+}
+
+const NotificationLink = (props: NotificationLinkProps) => (
   <Link target="blank" sx={{
     display: "inline-flex",
     alignItems: "center",
@@ -36,5 +41,5 @@ const NotificationLink: React.FC = ({ children, href }) => (
     "&:hover": {
       backgroundColor: "#000",
     }
-  }} href={href}>{children}</Link>
+  }} href={props.href}>{props.children}</Link>
 )
