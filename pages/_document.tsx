@@ -7,9 +7,9 @@ export default class MyDocument extends Document {
         <Head>
           <link
             rel="icon"
-            type="image/png"
-            href="/minimodules_logo_positive.png"
-          ></link>
+            type="image/svg+xml"
+            href="/minimodular_logo_positive.svg">
+          </link>
           <link
             rel="preconnect"
             href="https://fonts.gstatic.com">
