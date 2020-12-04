@@ -19,7 +19,7 @@ const Home: React.FC = () => (
           fontFamily: "heading",
           fontSize: 4,
         }}>
-          Ultralight, minimal, modular organization systems for the outdoors. Handmade in small batches in Brooklyn, New York. Helping everyone to enjoy human-powered adventures neatly and safely.
+          Ultralight, minimal, modular organization systems for the outdoors. Handmade in small batches in Brooklyn, New York. Aspiring to help people to enjoy human-powered adventures neatly and safely.
         </Styled.p>
       </Box>
       <Box sx={{
