@@ -9,7 +9,7 @@ const Notification: React.FC = () => (
     boxShadow: "0 4px 8px rgba(0,0,0,0.1)",
     margin: 0,
     px: 3,
-    py: 2,
+    py: [3, 2],
     textAlign: "center",
   }}>
       Follow our research and development on <NotificationLink href="https://instagram.com/minimodular">Instagram<img
@@ -32,14 +32,16 @@ interface NotificationLinkProps {
 
 const NotificationLink = (props: NotificationLinkProps) => (
   <Link target="blank" sx={{
-    display: "inline-flex",
     alignItems: "center",
+    backgroundColor: "#000",
+    borderRadius: "4px",
+    color: "#fff",
+    display: ["flex", "inline-flex"],
+    justifyContent: "center",
+    mt: 2,
+    mb: [0, 2],
     px: 2,
     py: 1,
-    my: 2,
-    backgroundColor: "#000",
-    color: "#fff",
-    borderRadius: "4px",
     textDecoration: "none",
     "&:hover": {
       backgroundColor: "#D50000",
