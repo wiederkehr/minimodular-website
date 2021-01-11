@@ -19,7 +19,7 @@ const Notification: React.FC = () => (
         src={"/launch-app.svg"}
         height="16px"
         alt="External Link Icon"
-      /></NotificationLink>
+    /></NotificationLink>
   </p>
   )
   
@@ -33,9 +33,9 @@ interface NotificationLinkProps {
 const NotificationLink = (props: NotificationLinkProps) => (
   <Link target="blank" sx={{
     alignItems: "center",
-    backgroundColor: "#000",
+    backgroundColor: "text",
     borderRadius: "4px",
-    color: "#fff",
+    color: "surface",
     display: ["flex", "inline-flex"],
     justifyContent: "center",
     mt: 2,
@@ -44,7 +44,7 @@ const NotificationLink = (props: NotificationLinkProps) => (
     py: 1,
     textDecoration: "none",
     "&:hover": {
-      backgroundColor: "#D50000",
+      backgroundColor: "primary",
     }
   }} href={props.href}>{props.children}</Link>
 )
