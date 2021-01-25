@@ -5,12 +5,15 @@ import Copyright from "./Copyright";
 import Credit from "./Credit";
 
 const Footer: React.FC = () => (
-  <footer sx={{
+  <footer
+    sx={{
       backgroundColor: "surface",
       borderTop: "1px solid",
       borderColor: "border",
+      color: "muted",
       fontSize: 1,
       padding: 3,
+      textTransform: "uppercase",
     }}>  
     <Container
     sx={{

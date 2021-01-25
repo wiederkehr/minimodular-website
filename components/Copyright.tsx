@@ -6,7 +6,12 @@ const Copyright: React.FC = () => {
   let today = new Date();
   let year = today.getFullYear();
   return (
-    <p sx={{ padding: 0, margin: 0 }}>© {year}</p>
+    <p sx={{
+      margin: 0,
+      padding: 0,
+    }}>
+      © {year}
+    </p>
   )
 }
   

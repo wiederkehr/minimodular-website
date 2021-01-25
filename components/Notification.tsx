@@ -3,38 +3,46 @@ import { jsx, Link } from "theme-ui";
 import React from "react";
 
 const Notification: React.FC = () => (
-  <p sx={{
+  <Link href="https://instagram.com/minimodular" passHref target="blank" sx={{
     backgroundColor: "surface",
     borderRadius: 8,
-    boxShadow: "0 4px 8px rgba(0,0,0,0.1)",
+    display: "block",
     margin: 0,
     px: 3,
     py: [3, 2],
     textAlign: "center",
+    textDecoration: "none",
+    transition: "all 300ms",
+    boxShadow: "0 4px 8px rgba(0,0,0,0.1)",
+    "&:hover": {
+      boxShadow: "0 6px 12px rgba(0,0,0,0.2)",
+    },
+    "&:hover .NotificationButton": {
+      backgroundColor: "primary",
+    }
   }}>
-      Follow our research and development on <NotificationLink href="https://instagram.com/minimodular">Instagram<img
+      <a>Follow our research and development on <NotificationButton>Instagram<img
       sx={{
         marginLeft: 2,
       }}
         src={"/launch-app.svg"}
         height="16px"
         alt="External Link Icon"
-    /></NotificationLink>
-  </p>
+    /></NotificationButton></a>
+  </Link>
   )
   
 export default Notification;
 
-interface NotificationLinkProps {
+interface NotificationButtonProps {
   children?: React.ReactNode;
-  href: string
 }
 
-const NotificationLink = (props: NotificationLinkProps) => (
-  <Link target="blank" sx={{
+const NotificationButton = (props: NotificationButtonProps) => (
+  <span className="NotificationButton" sx={{
     alignItems: "center",
     backgroundColor: "text",
-    borderRadius: "4px",
+    borderRadius: 4,
     color: "surface",
     display: ["flex", "inline-flex"],
     justifyContent: "center",
@@ -42,9 +50,6 @@ const NotificationLink = (props: NotificationLinkProps) => (
     mb: [0, 2],
     px: 2,
     py: 1,
-    textDecoration: "none",
-    "&:hover": {
-      backgroundColor: "primary",
-    }
-  }} href={props.href}>{props.children}</Link>
+    transition: "all 300ms",
+  }}>{props.children}</span>
 )

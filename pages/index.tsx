@@ -1,46 +1,49 @@
 /** @jsx jsx */
+import config from "../site.config"
 import { jsx, Box, Styled } from "theme-ui";
-import React from "react";
-import Page from "../components/Page";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import Main from "../components/Main";
+import Meta from "../components/Meta";
+import Layout from "../components/Layout";
 import Notification from "../components/Notification";
-import {Articles, Article} from "../components/Articles";
+import PostList from "../components/PostList";
+import PostListItem from "../components/PostListItem";
+import { getAllPosts } from '../api';
 
-const Home: React.FC = () => (
-  <Page>
-    <Header />
-    <Main>
-      <Box sx={{
-          my: 5
-        }}>
-        <Styled.h1>Minimodular Gear Lab</Styled.h1>
-        <Styled.p sx={{
-          fontFamily: "heading",
-          fontSize: 4,
-        }}>
-          Ultralight, minimal, modular organization systems for the outdoors. Handmade in small batches in Brooklyn, New York. Aspiring to help people to enjoy human-powered adventures neatly and safely.
-        </Styled.p>
-      </Box>
-      <Box sx={{
-          my: 5
-        }}>
-        <Notification />
-      </Box>
-      <Box sx={{
-          my: 5
-        }}>
-        <Styled.h2>Articles</Styled.h2>
-        <Articles>
-          <Article href="" published="30. December 2020">Article 1</Article>
-          <Article href="" published="24. November 2020">Article 2</Article>
-          <Article href="" published="16. October 2020">Article 3</Article>
-        </Articles>
-      </Box>
-    </Main>
-    <Footer />
-  </Page>
-);
+const Home = ({posts}) => (
+  <Layout>
+    <Meta />
+    <Box sx={{my: 5}}>
+      <Styled.h1>{config.title} Gear Lab</Styled.h1>
+      <Styled.p sx={{
+        fontFamily: "heading",
+        fontSize: 4,
+      }}>
+        {config.description}
+    </Styled.p>
+    </Box>
+    <Box sx={{my: 5}}>
+      <Notification />
+    </Box>
+    <Box sx={{my: 5}}>
+      <Styled.h2>Projects</Styled.h2>
+      <PostList>
+        {posts.map((post, idx) => (
+          <PostListItem
+            key={idx}
+            href={`/posts/${post.slug}`}
+            date={post.date}>
+            {post.title}
+          </PostListItem>
+        ))}
+      </PostList>
+    </Box>
+  </Layout>
+)
 
 export default Home;
+
+export async function getStaticProps() {
+  const allPosts = getAllPosts(["title", "date", "slug"])
+  return {
+    props: { posts: allPosts }
+  }
+}
