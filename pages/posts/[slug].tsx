@@ -3,7 +3,7 @@ import config from "../../site.config"
 import { jsx } from "theme-ui";
 import Layout from "../../components/Layout";
 import Markdown from "../../components/Markdown";
-import Hero from "../../components/Hero";
+import Introduction from "../../components/Introduction";
 import { getPostBySlug, getAllPosts } from "../../api";
 
 
@@ -13,7 +13,7 @@ const Post = ({post}) => (
     description={post.description}
   >
     <article>
-      <Hero
+      <Introduction
         title={post.title}
         description={post.description}
       />

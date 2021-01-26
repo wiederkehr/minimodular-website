@@ -2,7 +2,7 @@
 import config from "../site.config"
 import { jsx, Box } from "theme-ui";
 import Layout from "../components/Layout";
-import Hero from "../components/Hero";
+import Introduction from "../components/Introduction";
 import Notification from "../components/Notification";
 import PostList from "../components/PostList";
 import PostListItem from "../components/PostListItem";
@@ -10,14 +10,15 @@ import { getAllPosts } from '../api';
 
 const Home = ({posts}) => (
   <Layout>
-    <Hero
+    <Introduction
       title={config.title + " Gear Lab"}
       description={config.description}
     />
     <Box sx={{my: 5}}>
       <Notification />
     </Box>
-    <Box sx={{my: 5}}>
+    <Box sx={{ my: 5 }}>
+      {!posts ? null : (
       <PostList>
         {posts.map((post, idx) => (
           <PostListItem
@@ -28,6 +29,7 @@ const Home = ({posts}) => (
           </PostListItem>
         ))}
       </PostList>
+      )}
     </Box>
   </Layout>
 )
@@ -37,6 +39,6 @@ export default Home;
 export async function getStaticProps() {
   const allPosts = getAllPosts(["title", "date", "slug"])
   return {
-    props: { posts: allPosts }
+    props: { posts: null }
   }
 }

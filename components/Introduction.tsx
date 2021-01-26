@@ -6,7 +6,7 @@ interface PostHeaderProps {
   description?: string;
 }
 
-const Hero = (props: PostHeaderProps) => (
+const Introduction = (props: PostHeaderProps) => (
   <header sx={{mt: 5, mb: 3}}>
     <Styled.h1>{props.title}</Styled.h1>
     {!props.description ? null : (
@@ -20,4 +20,4 @@ const Hero = (props: PostHeaderProps) => (
   </header>
 )
 
-export default Hero;
+export default Introduction;
