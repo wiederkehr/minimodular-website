@@ -13,8 +13,8 @@ export default {
   fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 96],
   fontWeights: {
     body: 400,
+    bold: 700,
     heading: 700,
-    bold: 600,
   },
   lineHeights: {
     body: 1.5,
@@ -59,6 +59,8 @@ export default {
       lineHeight: "heading",
       fontWeight: "heading",
       fontSize: 5,
+      mt: "2rem",
+      mb: "1.5rem",
     },
     h2: {
       color: "text",
@@ -66,6 +68,8 @@ export default {
       lineHeight: "heading",
       fontWeight: "heading",
       fontSize: 4,
+      mt: "2rem",
+      mb: "1rem",
     },
     h3: {
       color: "text",
@@ -73,6 +77,8 @@ export default {
       lineHeight: "heading",
       fontWeight: "heading",
       fontSize: 3,
+      mt: "2rem",
+      mb: "1rem",
     },
     h4: {
       color: "text",
@@ -135,5 +141,8 @@ export default {
       paddingLeft: 3,
     },
     li: {},
+    strong: {
+      fontWeight: "bold",
+    },
   },
 };

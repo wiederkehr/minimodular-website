@@ -1,42 +1,45 @@
 export const meta = {
   title: "About Minimodular",
-  description: "We’re an experimental design studio for minimalistic and modular outdoor gear.",
-}
+  description:
+    "We‘re an experimental product design studio with a focus on ultralight, minimal, modular outdoor gear. Our products are exclusive, non-commercial prototypes for personal use.",
+};
 
-## Our Design Values
+## Our Purpose
 
-**Experience Design Values**
+Inspired by our own adventures in the great outdoors and motivated by shortcomings of commercial products, we starter to make our own gear. First to safe money by making simple commodities like roll-top bags. Then, to create alternatives to existing products with a feature set that better suits our needs like a dog harness specifically designed for sighthound body types. And finally, to invent new products that fit our personal objectives and setup like a modular running vest with varying load capacities.
 
-- **Simplicity**: Easy to use, maintain, and repair products.
-- **Efficiency**: Fast to open and close, tighten and loosen, attach and detach.
-- **Safety**: Made from reliable materials and construction methods.
+## Our Team
 
-**Product Design Values**
+We’re a team of three: Anna, Benjamin, and Tollak. Anna and Benjamin both have a background in digital product design and are passionate distance runners and hikers. Tollak is a female whippet and undoubtedly the fastest of the pack. While Benjamin is mainly responsible for the design and development of our products, Anna and Tollak are critiquing, testing, and occasionally shredding his creations.
+
+## Our Values
+
+### Product Design Values
 
 - **Ultralight**: Ultralight materials and construction methods.
-- **Minimal**: Minimal aesthetics and simple functionality.
-- **Modular**: Modular sizing, spacing, timing, naming, pricing systems.
+- **Minimal**: Minimal aesthetics and features.
+- **Modular**: Modular sizing, spacing, timing, naming systems.
 
-**Production Design Values**
+### Production Design Values
 
-- **Hand-crafted**: Individually designed, developed, and tested with greatest attention to detail.
-- **Small-batch**: Produced and delivered in small batches with minimal environmental footprint.
+- **Hand-crafted**: Individually designed, developed, tested with greatest attention to detail.
+- **Small-batch**: Produced in small batches with minimal environmental footprint.
 - **Local**: Materials sourced from the closest supplier adhering to our quality standards.
+
+### Experience Design Values
+
+- **Simplicity**: Easy to use, maintain, and repair.
+- **Efficiency**: Fast to open and close, tighten and loosen, attach and detach.
+- **Safety**: Reliable materials and construction methods.
 
 import Layout from "../components/Layout";
 import Hero from "../components/Hero";
 
 export default ({ children }) => (
-  <Layout
-    title={ meta.title }
-    description={ meta.description }
-  >
+  <Layout title={meta.title} description={meta.description}>
     <article>
-      <Hero
-        title={meta.title}
-        description={meta.description}
-      />
+      <Hero title={meta.title} description={meta.description} />
       {children}
     </article>
   </Layout>
-)
+);

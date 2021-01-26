@@ -15,7 +15,7 @@ export default class Document extends NextDocument {
             href="https://fonts.gstatic.com">
           </link>
           <link
-            href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;500;700&family=Source+Serif+Pro:wght@400;500;700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;700&family=Source+Serif+Pro:wght@400;600;700&display=swap"
             rel="stylesheet">
           </link>
         </Head>
