@@ -16,11 +16,13 @@ const Credit: React.FC = () => (
         borderRadius: 4,
         px: 2,
         py: 1,
+        ml: -2,
         backgroundColor: "surface",
         transition: "all 300ms",
         "&:hover": {
           backgroundColor: "background",
           color: "text",
+          ml: 0,
         }
       }}
       href={config.authorURL}
