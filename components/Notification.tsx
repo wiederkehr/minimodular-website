@@ -3,7 +3,7 @@ import { jsx, Link } from "theme-ui";
 import React from "react";
 
 const Notification: React.FC = () => (
-  <Link href="https://instagram.com/minimodular" passHref target="blank" sx={{
+  <Link href="https://instagram.com/minimodular" target="blank" sx={{
     backgroundColor: "surface",
     borderRadius: 8,
     display: "block",

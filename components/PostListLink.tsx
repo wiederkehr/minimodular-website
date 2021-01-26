@@ -2,7 +2,6 @@
 import { jsx } from "theme-ui";
 import Link from "next/link";
 import React from "react";
-import { inherits } from "util";
 
 interface PostListLinkProps {
   children?: React.ReactNode;
