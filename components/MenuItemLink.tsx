@@ -14,13 +14,14 @@ const MenuItemLink = (props: MenuItemLinkProps) => {
   return (
     <Link href={props.href} passHref>
       <a sx={{
+        backgroundColor: "surface",
         borderRadius: 4,
+        color: selected ? "text" : "muted",
+        cursor: selected ? "default" : "pointer",
         px: 2,
         py: 2,
-        color: selected ? "text" : "muted",
-        backgroundColor: "surface",
-        transition: "all 300ms",
         textDecoration: "inherit",
+        transition: "all 300ms",
         "&:hover": {
           backgroundColor: selected ? null : "background",
           color: selected ? null : "text",

@@ -5,7 +5,6 @@ import MenuItemLink from "./MenuItemLink";
 interface MenuItemProps {
   children?: React.ReactNode;
   href: string;
-  last?: boolean;
 }
 
 const MenuItem = (props: MenuItemProps) => (
