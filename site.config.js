@@ -6,5 +6,5 @@ module.exports = {
   author: "Benjamin Wiederkehr",
   authorURL: "https://benjaminwiederkehr.com",
   analytics: "", // put your google analytics code here to add tracking
-  image: "/share-image.png",
+  image: "/minimodular-share-image.png",
 };

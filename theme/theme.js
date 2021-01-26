@@ -30,7 +30,7 @@ export default {
     primary: "#D50000",
     onPrimary: palette.mono[12],
     disabled: palette.mono[8],
-    muted: palette.mono[5],
+    muted: palette.mono[6],
     modes: {
       dark: {
         text: palette.mono[12],
@@ -110,6 +110,9 @@ export default {
     },
     a: {
       color: "text",
+      "&:hover": {
+        color: "primary",
+      },
     },
     pre: {
       fontFamily: "monospace",
