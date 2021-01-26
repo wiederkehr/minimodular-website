@@ -1,8 +1,8 @@
 /** @jsx jsx */
 import config from "../site.config"
-import { jsx, Box, Styled } from "theme-ui";
-import Meta from "../components/Meta";
+import { jsx, Box } from "theme-ui";
 import Layout from "../components/Layout";
+import Hero from "../components/Hero";
 import Notification from "../components/Notification";
 import PostList from "../components/PostList";
 import PostListItem from "../components/PostListItem";
@@ -10,21 +10,14 @@ import { getAllPosts } from '../api';
 
 const Home = ({posts}) => (
   <Layout>
-    <Meta />
-    <Box sx={{my: 5}}>
-      <Styled.h1>{config.title} Gear Lab</Styled.h1>
-      <Styled.p sx={{
-        fontFamily: "heading",
-        fontSize: 4,
-      }}>
-        {config.description}
-    </Styled.p>
-    </Box>
+    <Hero
+      title={config.title + " Gear Lab"}
+      description={config.description}
+    />
     <Box sx={{my: 5}}>
       <Notification />
     </Box>
     <Box sx={{my: 5}}>
-      <Styled.h2>Projects</Styled.h2>
       <PostList>
         {posts.map((post, idx) => (
           <PostListItem

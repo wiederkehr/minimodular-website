@@ -1,25 +1,23 @@
 /** @jsx jsx */
 import config from "../../site.config"
 import { jsx } from "theme-ui";
-import Meta from "../../components/Meta";
 import Layout from "../../components/Layout";
-import PostBody from "../../components/PostBody";
-import PostHeader from "../../components/PostHeader";
+import Markdown from "../../components/Markdown";
+import Hero from "../../components/Hero";
 import { getPostBySlug, getAllPosts } from "../../api";
 
 
 const Post = ({post}) => (
-  <Layout>
-    <Meta
-      title={config.title + " | " + post.title}
-      description={post.description}
-    />
-    <article sx={{ my: 5 }}>
-      <PostHeader
+  <Layout
+    title={config.title + " | " + post.title}
+    description={post.description}
+  >
+    <article>
+      <Hero
         title={post.title}
         description={post.description}
       />
-      <PostBody
+      <Markdown
         content={post.content}
       />
     </article>

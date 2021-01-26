@@ -1,24 +1,27 @@
-import { Box } from "theme-ui";
 import React from "react";
-import Page from "../components/Page";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import Main from "../components/Main";
+import Page from "./Page";
+import Meta from "./Meta";
+import Header from "./Header";
+import Footer from "./Footer";
+import Main from "./Main";
 
 interface LayoutProps {
   children?: React.ReactNode;
+  title?: string;
+  description?: string;
+  author?: string;
+  image?: string;
 }
 
-const Layout: React.FC = (props: LayoutProps) => (
-  <Box>
-    <Page>
-      <Header />
-      <Main>
-        {props.children}
-      </Main>
-      <Footer />
-    </Page>
-  </Box>
+const Layout = (props: LayoutProps) => (
+  <Page>
+    <Meta {...props} />
+    <Header />
+    <Main>
+      {props.children}
+    </Main>
+    <Footer />
+  </Page>
 );
 
 export default Layout;

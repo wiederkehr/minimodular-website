@@ -2,11 +2,11 @@
 import { jsx, Box } from "theme-ui";
 import MDX from "@mdx-js/runtime"
 
-interface PostBodyProps {
+interface MarkdownProps {
   content: string;
 }
 
-const PostBody = (props: PostBodyProps) => {
+const Markdown = (props: MarkdownProps) => {
   const components = {
     Box: (props) => <Box {...props} />,
   }
@@ -15,4 +15,4 @@ const PostBody = (props: PostBodyProps) => {
   )
 }
 
-export default PostBody;
+export default Markdown;

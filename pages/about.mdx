@@ -1,0 +1,42 @@
+export const meta = {
+  title: "About Minimodular",
+  description: "We’re an experimental design studio for minimalistic and modular outdoor gear.",
+}
+
+## Our Design Values
+
+**Experience Design Values**
+
+- **Simplicity**: Easy to use, maintain, and repair products.
+- **Efficiency**: Fast to open and close, tighten and loosen, attach and detach.
+- **Safety**: Made from reliable materials and construction methods.
+
+**Product Design Values**
+
+- **Ultralight**: Ultralight materials and construction methods.
+- **Minimal**: Minimal aesthetics and simple functionality.
+- **Modular**: Modular sizing, spacing, timing, naming, pricing systems.
+
+**Production Design Values**
+
+- **Hand-crafted**: Individually designed, developed, and tested with greatest attention to detail.
+- **Small-batch**: Produced and delivered in small batches with minimal environmental footprint.
+- **Local**: Materials sourced from the closest supplier adhering to our quality standards.
+
+import Layout from "../components/Layout";
+import Hero from "../components/Hero";
+
+export default ({ children }) => (
+  <Layout
+    title={ meta.title }
+    description={ meta.description }
+  >
+    <article>
+      <Hero
+        title={meta.title}
+        description={meta.description}
+      />
+      {children}
+    </article>
+  </Layout>
+)

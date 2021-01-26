@@ -131,5 +131,9 @@ export default {
     hr: {
       color: "border",
     },
+    ul: {
+      paddingLeft: 3,
+    },
+    li: {},
   },
 };
