@@ -2,6 +2,7 @@ const withMDX = require("@next/mdx")({
   extension: /\.mdx?$/,
 });
 module.exports = withMDX({
+  target: "serverless",
   pageExtensions: ["js", "jsx", "tsx", "md", "mdx"],
   webpack: (config, { isServer }) => {
     // Fixes npm packages (mdx) that depend on `fs` module
