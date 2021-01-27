@@ -6,7 +6,7 @@ import Introduction from "../components/Introduction";
 import Notification from "../components/Notification";
 import PostList from "../components/PostList";
 import PostListItem from "../components/PostListItem";
-import { getAllPosts } from '../api';
+import { getAllPosts, getPublishedPosts } from '../api';
 
 const Home = ({posts}) => (
   <Page
@@ -40,8 +40,10 @@ const Home = ({posts}) => (
 export default Home;
 
 export async function getStaticProps() {
-  const allPosts = getAllPosts(["title", "date", "slug", "draft"])
+  const fields = ["title", "date", "slug"];
+  const isLocal = process.env.NODE_ENV === "development";
+  const posts = isLocal ? getAllPosts(fields) : getPublishedPosts(fields)
   return {
-    props: { posts: allPosts }
+    props: { posts: posts }
   }
 }

@@ -35,7 +35,11 @@ export function getAllPosts(fields = []) {
   const slugs = getPostSlugs();
   const posts = slugs
     .map((slug) => getPostBySlug(slug, fields))
-    .filter((post) => !post.draft)
     .sort((post1, post2) => (post1.date > post2.date ? "-1" : "1"));
   return posts;
+}
+
+export function getPublishedPosts(fields = []) {
+  const posts = getAllPosts(fields.concat("draft"));
+  return posts.filter((post) => !post.draft);
 }
