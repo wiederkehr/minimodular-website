@@ -10,6 +10,7 @@ interface MenuItemProps {
 const MenuItem = (props: MenuItemProps) => (
   <li sx={{
     display: "inline-block",
+    mr: 2
   }}
   >
     <MenuItemLink href={props.href}>
