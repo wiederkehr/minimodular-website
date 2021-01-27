@@ -1,27 +1,18 @@
+/** @jsx jsx */
+import { jsx } from "theme-ui";
 import React from "react";
-import Page from "./Page";
-import Meta from "./Meta";
-import Header from "./Header";
-import Footer from "./Footer";
-import Main from "./Main";
 
-interface LayoutProps {
-  children?: React.ReactNode;
-  title?: string;
-  description?: string;
-  author?: string;
-  image?: string;
-}
-
-const Layout = (props: LayoutProps) => (
-  <Page>
-    <Meta {...props} />
-    <Header />
-    <Main>
-      {props.children}
-    </Main>
-    <Footer />
-  </Page>
+const Layout: React.FC = ({ children }) => (
+  <div
+    sx={{
+      backgroundColor: "background",
+      display: "flex",
+      flexDirection: "column",
+      minHeight: "100vh",
+    }}
+  >
+    {children}
+  </div>
 );
 
 export default Layout;

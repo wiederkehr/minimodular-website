@@ -1,5 +1,5 @@
 import NextHead from 'next/head'
-import config from "../site.config"
+import site from "../site.config"
 
 interface MetaProps {
   title?: string;
@@ -10,13 +10,13 @@ interface MetaProps {
 
 const Meta = (props: MetaProps) => (
   <NextHead>
-    <title>{props.title ? props.title : config.title}</title>
-    <meta property="og:title" content={props.title ? props.title : config.title} />
-    <meta name="description" content={props.description ? props.description : config.description} />
-    <meta property="og:description" content={props.description ? props.description : config.description} />
-    <meta name="author" content={props.author ? props.author : config.author} />
-    <meta property="og:author" content={props.author ? props.author : config.author} />
-    <meta property="og:image" content={props.image ? props.image : config.image} />
+    <title>{props.title ? props.title : site.title}</title>
+    <meta property="og:title" content={props.title ? props.title : site.title} />
+    <meta name="description" content={props.description ? props.description : site.description} />
+    <meta property="og:description" content={props.description ? props.description : site.description} />
+    <meta name="author" content={props.author ? props.author : site.author} />
+    <meta property="og:author" content={props.author ? props.author : site.author} />
+    <meta property="og:image" content={props.image ? props.image : site.image} />
   </NextHead>
 );
 

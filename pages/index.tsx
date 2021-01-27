@@ -1,7 +1,7 @@
 /** @jsx jsx */
-import config from "../site.config"
+import site from "../site.config"
 import { jsx, Box } from "theme-ui";
-import Layout from "../components/Layout";
+import Page from "../components/Page";
 import Introduction from "../components/Introduction";
 import Notification from "../components/Notification";
 import PostList from "../components/PostList";
@@ -9,10 +9,13 @@ import PostListItem from "../components/PostListItem";
 import { getAllPosts } from '../api';
 
 const Home = ({posts}) => (
-  <Layout>
+  <Page
+    title={site.title}
+    description={site.description}
+  >
     <Introduction
-      title={config.title + " Gear Lab"}
-      description={config.description}
+      title={site.title + " Gear Lab"}
+      description={site.description}
     />
     <Box sx={{my: 5}}>
       <Notification />
@@ -31,7 +34,7 @@ const Home = ({posts}) => (
       </PostList>
       )}
     </Box>
-  </Layout>
+  </Page>
 )
 
 export default Home;

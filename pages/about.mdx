@@ -1,4 +1,4 @@
-export const meta = {
+export const page = {
   title: "About Minimodular",
   description:
     "We‘re an experimental product design studio with a focus on ultralight, minimal, modular outdoor gear. Our products are exclusive, non-commercial prototypes for personal use.",
@@ -32,14 +32,14 @@ We’re a team of three: [Anna](https://www.instagram.com/wiederkehrac/), [Benja
 - **Efficiency**: Fast to open and close, tighten and loosen, attach and detach.
 - **Safety**: Reliable materials and construction methods.
 
-import Layout from "../components/Layout";
+import Page from "../components/Page";
 import Introduction from "../components/Introduction";
 
 export default ({ children }) => (
-  <Layout title={meta.title} description={meta.description}>
+  <Page title={page.title} description={page.description}>
     <article>
-      <Introduction title={meta.title} description={meta.description} />
+      <Introduction title={page.title} description={page.description} />
       {children}
     </article>
-  </Layout>
+  </Page>
 );

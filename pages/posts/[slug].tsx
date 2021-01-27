@@ -1,15 +1,15 @@
 /** @jsx jsx */
-import config from "../../site.config"
+import site from "../../site.config"
 import { jsx } from "theme-ui";
-import Layout from "../../components/Layout";
+import Page from "../../components/Page";
 import Markdown from "../../components/Markdown";
 import Introduction from "../../components/Introduction";
 import { getPostBySlug, getAllPosts } from "../../api";
 
 
 const Post = ({post}) => (
-  <Layout
-    title={config.title + " | " + post.title}
+  <Page
+    title={site.title + " | " + post.title}
     description={post.description}
   >
     <article>
@@ -21,7 +21,7 @@ const Post = ({post}) => (
         content={post.content}
       />
     </article>
-</Layout>
+</Page>
 )
 
 export default Post
