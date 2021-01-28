@@ -5,20 +5,24 @@ import matter from "gray-matter";
 const postsDirectory = join(process.cwd(), "posts");
 
 export function getPostSlugs() {
-  return fs.readdirSync(postsDirectory);
+  const folders = fs
+    .readdirSync(postsDirectory, { withFileTypes: true })
+    .filter((item) => !/(^|\/)\.[^\/\.]/g.test(item))
+    .filter((item) => item.isDirectory())
+    .map((item) => item.name);
+  return folders;
 }
 
 export function getPostBySlug(slug, fields = []) {
-  const realSlug = slug.replace(/\.mdx$/, "");
-  const fullPath = join(postsDirectory, `${realSlug}.mdx`);
-  const fileContents = fs.readFileSync(fullPath, "utf8");
-  const { data, content } = matter(fileContents);
+  const path = join(postsDirectory, `${slug}/${slug}.mdx`);
+  const markdown = fs.readFileSync(path, "utf8");
+  const { data, content } = matter(markdown);
 
   const items = {};
 
   fields.forEach((field) => {
     if (field === "slug") {
-      items[field] = realSlug;
+      items[field] = slug;
     }
     if (field === "content") {
       items[field] = content;
