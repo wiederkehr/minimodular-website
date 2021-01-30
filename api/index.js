@@ -2,7 +2,7 @@ import fs from "fs";
 import { join } from "path";
 import matter from "gray-matter";
 
-const postsDirectory = join(process.cwd(), "posts");
+const postsDirectory = join(process.cwd(), "pages/posts");
 
 export function getPostSlugs() {
   const folders = fs
@@ -14,7 +14,7 @@ export function getPostSlugs() {
 }
 
 export function getPostBySlug(slug, fields = []) {
-  const path = join(postsDirectory, `${slug}/${slug}.mdx`);
+  const path = join(postsDirectory, `${slug}/index.mdx`);
   const markdown = fs.readFileSync(path, "utf8");
   const { data, content } = matter(markdown);
 

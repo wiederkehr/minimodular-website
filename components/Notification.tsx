@@ -15,20 +15,21 @@ const Notification: React.FC = () => (
     transition: "all 300ms",
     boxShadow: "0 4px 8px rgba(0,0,0,0.1)",
     "&:hover": {
+      color: "text",
       boxShadow: "0 6px 12px rgba(0,0,0,0.2)",
     },
     "&:hover .NotificationButton": {
       backgroundColor: "primary",
     }
   }}>
-      <a>Follow our research and development on <NotificationButton>Instagram<img
+      Follow our research and development on <NotificationButton>Instagram<img
       sx={{
         marginLeft: 2,
       }}
         src={"/launch-app.svg"}
         height="16px"
         alt="External Link Icon"
-    /></NotificationButton></a>
+    /></NotificationButton>
   </Link>
   )
   

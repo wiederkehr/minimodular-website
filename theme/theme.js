@@ -137,6 +137,7 @@ export default {
     },
     img: {
       maxWidth: "100%",
+      mv: 3,
     },
     hr: {
       color: "border",

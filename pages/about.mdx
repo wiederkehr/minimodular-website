@@ -1,8 +1,8 @@
-export const page = {
-  title: "About Minimodular",
-  description:
-    "We‘re an experimental product design studio with a focus on ultralight, minimal, modular outdoor gear. Our products are exclusive, non-commercial prototypes for personal use.",
-};
+---
+title: "About Minimodular"
+description: "We‘re an experimental product design studio with a focus on ultralight, minimal, modular outdoor gear. Our products are exclusive, non-commercial prototypes for personal use."
+layout: "default"
+---
 
 ## Our Purpose
 
@@ -31,15 +31,3 @@ We’re a team of three: [Anna](https://www.instagram.com/wiederkehrac/), [Benja
 - **Safety**: Reliable construction materials and methods.
 - **Simplicity**: Easy to use, maintain, and repair.
 - **Efficiency**: Fast to open and close, tighten and loosen, attach and detach.
-
-import Page from "../components/Page";
-import Introduction from "../components/Introduction";
-
-export default ({ children }) => (
-  <Page title={page.title} description={page.description}>
-    <article>
-      <Introduction title={page.title} description={page.description} />
-      {children}
-    </article>
-  </Page>
-);
