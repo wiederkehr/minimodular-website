@@ -6,22 +6,102 @@ layout: "default"
 draft: true
 ---
 
+import { Grid } from "theme-ui";
+import Figure from "../../../components/Figure";
+import Sketch from "./IMG_8541.jpg";
+import Screen from "./IMG_8560.jpg";
 import Front from "./IMG_8806.jpg";
+import Side from "./IMG_8805.jpg";
+import Back1 from "./IMG_8800.jpg";
+import Back2 from "./IMG_8799.jpg";
+import Detail1 from "./IMG_8696.jpg";
+import Detail2 from "./IMG_8697.jpg";
+import Detail3 from "./IMG_8698.jpg";
+import Detail4 from "./IMG_8699.jpg";
+import Construction1 from "./IMG_8629.jpg";
+import Construction2 from "./IMG_8659.jpg";
+import Construction3 from "./IMG_8684.jpg";
+import Construction4 from "./IMG_8699.jpg";
+import Impression1 from "./IMG_8801.jpg";
+import Impression2 from "./IMG_8802.jpg";
+
+<Grid gap={3} columns={[1, "1fr 1fr"]}>
+  <Figure {...Impression2} alt="Vest harness of Vestpack Prototype 1.0" />
+  <Figure {...Impression1} alt="Main body of Vestpack Prototype 1.0" />
+  <Figure {...Back2} alt="Main body of Vestpack Prototype 1.0" />
+  <Figure {...Back1} alt="Main body of Vestpack Prototype 1.0" />
+</Grid>
 
 ## Objective
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut ali quip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Covering long distances fast and self-sufficient is our favorite mode of travelling in the outdoors. To do this comfortably day-in and day-out, we can’t allow unnecessary balast slow us down. The most obvious form of balast is the weight of our gear. But balast also comes in less obvious forms like hard to reach pockets, slow to open and close closures, or difficult to use features. The objective of this running vest style backpack is to provide a load volume of 20–24 liters and a haul capacity of 4–6 kg of gear and food in a minimal but comfortable package to wear all day while hiking, running, scrambling, or climbing.
 
-<img {...Front} />
+## Concept
+
+The basic concept of the Vestpack combines a running vest harness with a low-capacity, single-pocket backpack. In my experience, a vest harness provides a more snug and secure fit than regular shoulder straps to prevent the pack from bouncing. A vests also reduces the need for a hip belt, which I find unfomfortable and unpractical to run with. Instead, vest straps are held together with a double sternum strap or, as in this case, with a zig-zag elastic cord across the ribcage. The pack itself consists of a simple main body bag with a roll-top closure and a single stretchy external pocket that wraps around the whole bag.
+
+### Main Components
+
+- Roll-top main body with snap fasteners and side release buckle.
+- Top strap with aluminum g-buckle made with 15mm polyester webbing.
+- Top loop for top strap hook and for lifting made with 15mm polyester webbing.
+- External front pocket made with Lycra stretch mesh and reinforcement triangle.
+- External bottom pocket with opening at the back made with Lycra stretch mesh.
+- Side compression straps with LineLocs made with 2mm elastic cord.
+- Vest harness made with double layer 3mm spacer mesh.
+- Shoulder pockets for 500ml soft flask made with Lycra stretch mesh.
+- Chest pockets with snap fasteners made with Lycra stretch mesh.
 
 ## Modelling
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+<Grid gap={3} columns={[1, "1fr 1fr"]}>
+  <Figure {...Sketch} caption alt="Early pen & paper sketches" />
+  <Figure {...Screen} caption alt="Digital patterns using Sketch" />
+</Grid>
 
-## Construction
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+I started the pen and paper sketching process with a focus on how the pack will be carried by the end user and its overall proportions. After the basic concept for vest and pack were complete, I explored different variations for each component in more detail. After multiple iterations on paper, I translated the sketches into digital 2d patterns using [Sketch](https://www.sketch.com/). I usually don’t print my patterns and instead redraw them onto the material for prototyping or the fabric for the final build. To get a feeling for the dimensions of the main body, I’ve built a low-fidelity prototype from a brown packing grocery bag and do tailor the vest straps, I used simple tracing paper.
 
 ## Materials
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+In order to keep the weight low without compromising performance, I decided to use [X-PAC V15](https://ripstopbytheroll.com/products/x-pac-v15) for the main body. This variant of X-PAC is as abrasion resistant as the VX15 and as light as VX07 because the laminate comes without the typical X-PLY grid. This saves weight and eliminates potential abrasion points from protruding ripstop as [discussed by Pa'lante](https://www.youtube.com/watch?v=cevSvj1uYmc). I enjoyed working with the material but it’s more structured and robust than I expected. Considering the low load volume, I could envision a version with an even lighter. The vest harness is built with two layers of 3mm spacer mesh. They are an absolute joy to wear even without a dedicated layer of foam. Again, I could envision an even lighter version with a single layer of spacer mesh. Sourcing the fabrics and components was a bit tricky and I ended up ordering from four different, trusted shops [RipstopByTheRoll](https://ripstopbytheroll.com/), [Dutchware Gear](https://dutchwaregear.com/), [Quest Outfitters](https://www.questoutfitters.com/), and [Extremtextil](https://www.extremtextil.de/en/).
+
+## Details
+
+<Grid gap={3} columns={[1, "1fr 1fr"]}>
+  <Figure
+    {...Detail1}
+    caption
+    alt="Combined lift loop and top strap attachment point"
+  />
+  <Figure
+    {...Detail2}
+    caption
+    alt="LineLocs for side compression straps attached to reinforced front pocket"
+  />
+  <Figure {...Detail3} caption alt="Snap fasteners to close chest pockets" />
+  <Figure
+    {...Detail4}
+    caption
+    alt="Series of loops as flexible sternum strap attachment points"
+  />
+</Grid>
+
+## Inspiration
+
+Many of the aspects and components of the vestpack are inspired by products from commercial companies like Salomon (XA 25), Ultimate Direction (Fastpack 25), and Black Diamond (Distance 15) as well as the work from cottage companies like Pa'lante (Joey), Nashville Packs (Cutaway), and Atélier Longue Distance (Hybrid).
+
+## Learnings
+
+<Grid gap={3} columns={[1, "1fr 1fr"]}>
+  <Figure {...Side} alt="Side view of the Vestpack Prototype 1.0" />
+  <Figure {...Front} alt="Front view of the Vestpack Prototype 1.0" />
+</Grid>
+
+I’m very happy with how the vestpack turned out. The construction worked out pretty much as intended and the carrying experience is stable and comfortable. Still, there are a few things that I realized during the sewing process how I could simplify the design or the construction. I’m pretty sure that more things will come as we’re testing the packs more thoroughly in the coming season.
+
+- The front bottom corners of the main body should be rounded instead of boxed for a more streamlined aesthetic without loosing much internal volume.
+- The compression strap tensioner should be combined into a double cord stopper and hidden behind triangle with grommets instead of two separate LineLocs.
+- The top strap attachment loop is too long when the pack is only partly filled. I added another seam at the bottom of loop to provide a second loop to hook into for low capacity hauls.
+- The 2mm elastic cord is a bit weak for the sternum strap and I’m looking for a better fitting set of attachment components.
+
+**❤️ Thanks for your interest and if you have any questions or comments, hit me up on [Instagram](https://www.instagram.com/minimodular/).**
